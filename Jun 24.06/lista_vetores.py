@@ -1,8 +1,8 @@
-# numeros = [9, 18, 41, 65, 88, 121]
+numeros = [9, 18, 41, 65, 88, 121]
 
-# nomes = ["Rafael", "Ayslan", "Daniela", "Frank"]
+nomes = ["Rafael", "Ayslan", "Daniela", "Frank"]
 
-# num_float = [3290.90, 128.50, 85.90, 789.31]
+num_float = [3290.90, 128.50, 85.90, 789.31]
 
 x = [0] * 5
 
@@ -19,4 +19,3 @@ print(x[4], x[3], x[2], x[1], x[0])
 print(x[0] * 2, x[1] * 2, x[2] * 2, x[3] * 2, x[4] * 2)
 
 print(x[0] / 2, x[1] / 2, x[2] / 2, x[3] / 2, x[4] / 2)
-
