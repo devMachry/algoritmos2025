@@ -1,4 +1,4 @@
-import revisao as rev
+import funcoesCriadas as funcao
 import random
 
 def vetorAleatorio(tamanho_min=5, tamanho_max=10):
@@ -19,21 +19,21 @@ while (True):
         num1 = random.randint(1, 100)
         num2 = random.randint(1, 100)
         print(f"Números aleatórios gerados: {num1} e {num2}")
-        resultadoMedia = rev.media(num1, num2)
+        resultadoMedia = funcao.media(num1, num2)
         print(f"A média é: {resultadoMedia}")
 
     elif opcao == '2':
-        soma = rev.verificarResultado()
+        soma = funcao.verificarResultado()
 
     elif opcao == '3':
         vetor = vetorAleatorio()
         print(f"Vetor gerado: {vetor}")
-        maiorNumero = rev.verificarMaior(vetor)
+        maiorNumero = funcao.verificarMaior(vetor)
         print(f"O maior número no vetor é: {maiorNumero}")
 
     elif opcao == '4':
         vetor = vetorAleatorio()
-        soma = rev.somarNumeros(vetor)
+        soma = funcao.somarNumeros(vetor)
         print(f"A soma do vetor é: {soma}\n")
 
     elif opcao == '5':
