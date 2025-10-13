@@ -33,11 +33,11 @@ def insercao(vetor):
             vetor[j+1] = vetor[j]
             j = j - 1
 
-        vetor[j] = temp
+        vetor[j+1] = temp
 
 
 # ordenação por seleção
 
 def selecao(vetor):
     for i in range(0, len(vetor)):
-        
+        pass

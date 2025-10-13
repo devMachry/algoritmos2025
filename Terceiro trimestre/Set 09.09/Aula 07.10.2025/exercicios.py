@@ -78,6 +78,8 @@ for i in range(0, len(minhaCompra)):
     print(f"{i+1} - {minhaCompra[i]}")
 
 '''
+'''
+EXERCICIO 8
 
 arq = open("notas.txt", "r")
 
@@ -102,3 +104,76 @@ for i in range(0, len(conteudo)):
 media = soma/ len(conteudo)
 print("Média dos valores", media)
 print(f"{nomeMaior} tem maior nota {maior}")
+'''
+
+'''
+EXERCICIO 9
+
+arq = open("compras.txt", "r")
+
+conteudo = arq.readlines()
+
+arq.close()
+
+#Pede o nome do cliente que será pesquisado
+
+nomeCliente = input("Digite o nome do cliente que deseja buscar: ")
+
+total = 0 
+
+for i in range(0, len(conteudo)):
+    linha = conteudo[i]             #pega uma linha do arquivo
+    valores = linha.split(",")      #separa o nome e o valor
+    nome = valores[0]
+    valor = float(valores[1])
+
+if(nome == nomeCliente):
+    total = total + valor
+
+print(f"{nomeCliente} - Total: R${total:.2f}")
+
+'''
+
+
+# arquivo = "vendas.txt"
+
+# arq = open(arquivo, "w", encoding="utf8")
+
+# arq.write("2025-09-28,Joana,120.00\n")
+# arq.write("2025-09-29,Tiago,75.00\n")
+# arq.write("2025-09-29,Joana,80.00\n")
+# arq.write("2025-09-30,Pedro,100.00\n")
+
+# arq.close()
+
+
+
+arq = open("vendas.txt", "r")
+
+conteudo = arq.readlines()
+
+arq.close()
+
+dataBusca =  input("Digite a data (AAAA-MM-DD): ")
+total = 0
+vendeu = False
+ 
+for i in range(0, len(conteudo)):
+    linha = conteudo[i]
+    valores = linha.split(",")
+
+    data = valores[0]
+    nome = valores[1]
+    valor = float(valores[2])
+
+if(data == dataBusca):
+    vendeu = True
+    print(f"{nome} vendeu R${valor:.2f}")
+    total = total + valor
+
+if(vendeu):
+     print(f"Total vendido em {dataBusca}: R${total:.2f}")
+else:
+    print("Nenhuma venda encontrada nessa data.")
+
+
